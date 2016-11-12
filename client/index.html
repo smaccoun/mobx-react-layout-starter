@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Gallery</title>
+    <link href="//cdn.muicss.com/mui-0.9.0/css/mui.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAR6Zw7K8IY68HP5AVODcPWAMhbXmFgWPs",
+        authDomain: "gil-photo-gallery.firebaseapp.com",
+        databaseURL: "https://gil-photo-gallery.firebaseio.com",
+        storageBucket: "gs://gil-photo-gallery.appspot.com",
+        messagingSenderId: "83178641125"
+      };
+      firebase.initializeApp(config);
+      var fbStorage = firebase.storage();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
