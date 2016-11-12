@@ -1,11 +1,13 @@
 import React from 'react'
+import {observer} from 'mobx-react'
 
-class Navbar extends React.Component {
-  render() {
+const Navbar = (props) => {
+
     return (
-        <div>Navbar!!!</div>
+        <div>
+          <button onClick={() => props.store.auth.logout()}>Logout</button>
+        </div>
     )
-  }
 }
 
-export default Navbar;
+export default observer(['store'], Navbar);

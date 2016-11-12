@@ -4,23 +4,19 @@ import React from 'react';
 import {Route} from 'mobx-router';
 
 //components
-import {Dashboard, MainPage} from '../client/components/Layout/Dashboard/Dashboard';
-//import UserProfile from 'components/UserProfile';
-
-console.log(Dashboard)
+import {MainPage} from '../client/components/Layout/Dashboard/Dashboard';
+import Profile from '../client/components/Profile/Profile'
 
 const routes = {
   home: new Route({
     path: '/',
-    component: <Dashboard mainPage={'home'}/>
+    component: <MainPage />
   }),
-
 
   main: new Route({
     path: '/main',
-    component: <MainPage/>
+    component: <Profile />
   })
-
 
 };
 export default routes;

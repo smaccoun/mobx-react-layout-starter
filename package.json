@@ -42,6 +42,7 @@
     "ramda": "^0.22.1",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-select": "^1.0.0-rc.2",
+    "singleton": "^1.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",

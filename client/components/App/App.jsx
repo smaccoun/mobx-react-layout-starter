@@ -11,6 +11,10 @@ import store from '../../stores/store';
 import routes from '../../../routes/routes'
 startRouter(routes, store);
 
+//Components
+import {Dashboard} from '../Layout/Dashboard/Dashboard'
+import Login from '../Login/Login'
+
 @observer
 class App extends Component {
 
@@ -19,9 +23,14 @@ class App extends Component {
     return (
         <Provider store={store}>
           <div>
-            <h1>{store.app.title}</h1>
-            <button onClick={() => store.router.goTo(routes.home)}> go home</button>
-            <MobxRouter/>
+            {!store.auth.isLoggedIn &&
+              <Login />
+            }
+            {store.auth.isLoggedIn &&
+              <Dashboard>
+                <MobxRouter/>
+              </Dashboard>
+            }
           </div>
         </Provider>
     )

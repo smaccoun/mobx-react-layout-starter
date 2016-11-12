@@ -1,9 +1,10 @@
-import {extendObservable, action} from 'mobx';
+import {extendObservable, observable, computed, action} from 'mobx';
 
 class AppStore {
+
   constructor() {
     extendObservable(this, {
-      title: 'MobX Router Tutorial',
+      title: 'Mobx Router Layout App',
       user: undefined
     });
   }
