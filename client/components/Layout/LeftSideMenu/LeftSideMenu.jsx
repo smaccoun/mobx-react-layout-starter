@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import {observer} from 'mobx-react'
 
@@ -7,9 +9,9 @@ const LeftSideMenu = (props) => {
   return(
       <div>
         <ul>
-        {props.links.map(link => {
+        {props.links.map((link, key) => {
           return(
-              <Link view={link.view} store={props.store}> Go to gallery </Link>
+              <Link key={key} view={link.route} store={props.store}> {link.label} </Link>
           )
         })}
         </ul>

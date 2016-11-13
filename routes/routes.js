@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 //models
@@ -13,10 +15,11 @@ const routes = {
     component: <MainPage />
   }),
 
-  main: new Route({
-    path: '/main',
+  profile: new Route({
+    path: '/profile',
     component: <Profile />
   })
 
 };
+
 export default routes;

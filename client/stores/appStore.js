@@ -1,3 +1,5 @@
+// @flow
+
 import {extendObservable, observable, computed, action} from 'mobx';
 
 class AppStore {

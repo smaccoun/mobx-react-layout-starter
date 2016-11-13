@@ -1,3 +1,5 @@
+// @flow
+
 import AppStore from './appStore';
 import Auth from './Auth'
 import {RouterStore} from 'mobx-router';

@@ -1,3 +1,5 @@
+// @flow
+
 import { observable, computed, autorun } from 'mobx';
 import singleton from 'singleton';
 
