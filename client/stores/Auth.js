@@ -2,9 +2,9 @@ import { observable, computed, autorun } from 'mobx';
 import singleton from 'singleton';
 
 class Auth extends singleton {
-  @observable user = null;
+  @observable sessionCreds = null;
   @computed get isLoggedIn() {
-    return !!this.user;
+    return !!this.sessionCreds;
   }
 
   constructor() {
@@ -13,18 +13,17 @@ class Auth extends singleton {
     const token = localStorage.getItem('token');
     console.log(token);
 
-    this.user = token;
+    this.sessionCreds = token;
   }
 
   login(username, password) {
-    this.user = {username, password}
-    console.log(this.user)
-    localStorage.setItem('token', username);
+    this.sessionCreds = {username, password}
+    localStorage.setItem('token', this.sessionCreds);
   }
 
   logout() {
     localStorage.removeItem('token');
-    this.user = null;
+    this.sessionCreds = null;
   }
 }
 
